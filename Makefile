@@ -30,9 +30,9 @@ test/cover:
 ## build: build the application
 .PHONY: build
 build:
-	go build -o=/tmp/bin/${BINARY_NAME} ${MAIN_PACKAGE_PATH}
+	go build -o=${BINARY_NAME} ${MAIN_PACKAGE_PATH}
 
 ## run: run the  application
 .PHONY: run
 run: build
-	/tmp/bin/$(BINARY_NAME) --url=https://google.com --requests=100 --concurrency=10
+	./$(BINARY_NAME) --url=https://google.com --requests=100 --concurrency=10
