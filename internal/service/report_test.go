@@ -33,11 +33,18 @@ func (suite *reportServiceTestSuite) TestGenerateReport() {
 		StatusCounts:  map[int]int{200: 90, 404: 5, 500: 5},
 	}
 
-	expectedOutput := fmt.Sprintf("Tempo total gasto: %v\n", testResult.Duration)
+	expectedOutput := fmt.Sprintf(" ___  ____  ____  ____  ___  ___    ____  ____  ___  ____\n")
+	expectedOutput += fmt.Sprintf("/ __)(_  _)(  _ \\( ___)/ __)/ __)  (_  _)( ___)/ __)(_  _)\n")
+	expectedOutput += fmt.Sprintf("\\__ \\  )(   )   / )__) \\__ \\\\__ \\    )(   )__) \\__ \\  )(\n")
+	expectedOutput += fmt.Sprintf("(___/ (__) (_)\\_)(____)(___/(___/   (__) (____)(___/ (__)\n")
+	expectedOutput += fmt.Sprintf("------------------------------------------------------------\n")
+	expectedOutput += fmt.Sprintf("Relatório de teste de stress\n")
+	expectedOutput += fmt.Sprintf("Tempo total gasto: %v\n", testResult.Duration)
 	expectedOutput += fmt.Sprintf("Total de requests: %d\n", testResult.TotalRequests)
 	expectedOutput += fmt.Sprintf("Requests com status 200: %d\n", testResult.StatusCounts[200])
 	expectedOutput += fmt.Sprintf("Status 404: %d\n", testResult.StatusCounts[404])
 	expectedOutput += fmt.Sprintf("Status 500: %d\n", testResult.StatusCounts[500])
+	expectedOutput += fmt.Sprintf("------------------------------------------------------------\n")
 
 	suite.rs.GenerateReport(testResult)
 
