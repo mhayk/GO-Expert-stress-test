@@ -127,3 +127,11 @@ Este README oferece uma visão geral do projeto, além de fornecer instruções 
 $ go install github.com/vektra/mockery/v2@v2.20.0
 $ mockery
 ```
+
+## Compilação e Execução
+
+Para rodar os testes unitários, execute o comando a seguir:
+
+```bash
+$ make test
+```
