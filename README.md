@@ -128,7 +128,7 @@ $ go install github.com/vektra/mockery/v2@v2.20.0
 $ mockery
 ```
 
-## Compilação e Execução
+## Executando os testes unitários
 
 Para rodar os testes unitários, execute o comando a seguir:
 
